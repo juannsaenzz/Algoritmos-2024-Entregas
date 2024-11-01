@@ -57,6 +57,11 @@ class HeapMax():
             result.append(value)
         return result
     
+    def search(self, value):
+        for index, element in enumerate(self.elements):
+            if element[1][0] == value:
+                return index
+    
     def arrive(self, value, priority):
         self.add([priority, value])
 
@@ -130,6 +135,10 @@ class HeapMin():
             result.append(value)
         return result
 
+    def search(self, value):
+        for index, element in enumerate(self.elements):
+            if element[1][0] == value:
+                return index
 
     def arrive(self, value, priority):
         self.add([priority, value])
@@ -181,5 +190,5 @@ class HeapMin():
 
 # print(h.elements)
 # a = input()
-#while len(h.elements) > 0:
-#    print(h.atention())
+# while len(h.elements) > 0:
+#     print(h.atention())
